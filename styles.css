@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Rubik:wght@300;400;500&display=swap');
+
+:root{
+    --rubik-font: 'Rubik', sans-serif;
+    --poppings: 'Poppins', sans-serif;
+    --Blue: hsl(246, 80%, 60%);
+    --white: #fff;
+
+    --Light-red: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet : hsl(264, 64%, 52%);
+    --Soft-orange : hsl(43, 84%, 65%);
+
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+
+    --radius: 1.2rem;
+    }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--rubik-font);
+    border-radius: var(--radius)         ;
+}
+
+body{
+    font-size: 62.5%;
+    background: url(images/watch.png), var(--Very-dark-blue);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    color: var(--white);
+}
+
+h1{
+    font-weight: 400;
+}
+
+.muted{
+    font-size: 0.9rem;
+    color: var(--Pale-Blue);
+}
+
+.heading{
+    letter-spacing: 3px;
+    font-size: 2.2rem;
+}
+
+.main-p{
+    background: var(--Dark-blue);
+    position: absolute;
+    top: 2.7rem;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.main-p img{
+    position: absolute;
+    right: 2rem;
+    padding: 0.5rem;
+}
+
+.main-p img:hover{
+    cursor: pointer;
+}
+
+.main-p h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.heading, .main-p, article{
+    padding: 2rem;
+}
+
+/* ---------MAIN SECTION----------------- */
+.main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 70%;
+    height: 70vh;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.main div{
+    position: relative; /* make divs touch bottom */
+    overflow: hidden;
+}
+
+.main h1{
+    font-weight: 100;
+    font-size: 2.1rem;
+}
+
+div.main > :nth-child(n+2){
+    position: relative;
+}
+
+div.main> :nth-child(n+2) h1{
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.item-1{
+    grid-row: 1/3;
+    background: var(--Dark-blue);
+}
+
+.item-in-1{
+    position:absolute;
+    background: var(--Blue);
+    top: 0;
+    overflow: visible;
+    height: 45vh;
+    width: 100%;
+}
+
+.item-in-1 img{
+    width: 4.5rem;
+    border: 3px solid white;
+    border-radius: 50%;
+    display: block;
+    transition: transform 350ms ease-in-out;
+}
+
+.item-in-1 img:hover{
+    transform: scale(1.2);
+}
+
+.reportFor{
+    margin-top: 2.3rem;
+}
+
+.jeremyBottom{
+    margin-top: 1.3rem;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    transition: all 350ms;
+}
+
+.jeremyBottom:hover{
+    color: white;
+}
+
+.item-1 div{
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    border-radius: 0;
+}
+
+.ico-back{
+    position: absolute;
+    right: 20px;
+    top: -6px;
+}
+
+
+/* --------------------ITEM 2 ******WORK******** */
+
+.item-2{
+    background: var(--Light-red);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------ACTIVE CLASSSS---------- */
+.active{
+    color: #fff;
+}
