@@ -8,7 +8,7 @@
     <link rel="icon" type="favicon" href="/images/icons8-watch-32.png" />
     <title>Time tracking dashboard</title>
   </head>
-  <body>
+  <body onload="defa();">
     <h1 class="heading">DASHBOARD</h1>
 
     <div class="main">
@@ -19,8 +19,8 @@
           <h1 class="jeremy">Jeremy Rodson</h1>
         </article>
         <div>
-          <p class="jeremyBottom muted">Daily</p>
-          <p class="jeremyBottom muted active">Weekly</p>
+          <p class="jeremyBottom muted" onclick="reRend();">Daily</p>
+          <p class="jeremyBottom muted active" onclick="reRend();">Weekly</p>
           <p class="jeremyBottom muted">Monthly</p>
         </div>
       </div>
