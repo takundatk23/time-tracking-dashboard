@@ -8,7 +8,7 @@
 
     --Light-red: hsl(15, 100%, 70%);
     --Soft-blue: hsl(195, 74%, 62%);
-    --Light-red: hsl(348, 100%, 68%);
+    --Light-red2: hsl(348, 100%, 68%);
     --Lime-green: hsl(145, 58%, 55%);
     --Violet : hsl(264, 64%, 52%);
     --Soft-orange : hsl(43, 84%, 65%);
@@ -85,7 +85,7 @@ h1{
 .main{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    width: 70%;
+    width: calc(100wv - 70% + 10rem);
     height: 70vh;
     justify-content: center;
     gap: 2rem;
@@ -103,6 +103,7 @@ h1{
 
 div.main > :nth-child(n+2){
     position: relative;
+    min-width: 213.94px;
 }
 
 div.main> :nth-child(n+2) h1{
@@ -123,6 +124,9 @@ div.main> :nth-child(n+2) h1{
     overflow: visible;
     height: 45vh;
     width: 100%;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .item-in-1 img{
@@ -173,6 +177,113 @@ div.main> :nth-child(n+2) h1{
     background: var(--Light-red);
 }
 
+.item-3{
+    background: var(--Soft-blue);
+}
+
+.item-4{
+    background: var(--Light-red2);
+}
+
+.item-5{
+    background: var(--Lime-green);
+}
+
+.item-6{
+    background: var(--Violet);
+}
+
+.item-7{
+    background: var(--Soft-orange);
+}
+
+
+/* ------MEDIA-QUERIES--- */
+@media(max-width: 960px){
+    .main{
+        width: 90%;
+        height: auto;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 2rem;
+    }
+
+    body{
+        background: url(images/watchsmall.png), var(--Very-dark-blue);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .item-1{
+        grid-row: 1/4;
+    }
+
+    .item-1 > div{
+        margin-bottom: 4.5rem;
+    }
+
+    .item-in-1{
+        height: 28rem;
+        padding-top: 4rem;
+    }
+
+    .reportFor{
+        margin-top: 6.8rem;
+    }
+
+    div.main > :nth-child(n+2) > div{
+        top: 2.7rem;
+        padding: 2rem;
+    }
+
+    div.main > :nth-child(n+2){
+        padding-bottom: 2.7rem;
+    }
+}
+
+@media(max-width: 795px){
+    .main{
+        width: 90%;
+        height: auto;
+        grid-template-columns: 1fr;
+        margin-bottom: 2rem;
+    }
+
+    .main h1{
+        font-size: 1.6rem;
+    }
+
+    .item-1{
+        height: 11.7rem;
+    }
+
+    .item-in-1{
+        height: 8rem;
+        padding: 2rem;
+    }
+
+    .reportFor, .jeremy{
+        position: absolute;
+    }
+
+    .reportFor{
+        right: 8rem;
+        top: -4rem;
+    }
+
+    .jeremy{
+        right: 1rem;
+        top: 4.5rem;
+        font-size: 0.5rem;
+    }
+
+    .item-1 div{
+        bottom: -3rem;
+        left: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+}
 
 
 
